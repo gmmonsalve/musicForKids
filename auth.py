@@ -8,7 +8,7 @@ from flask_mail import Mail, Message
 from itsdangerous.exc import SignatureExpired
 from werkzeug.security import check_password_hash, generate_password_hash
 from werkzeug.utils import redirect
-from .db import get_db
+from db import get_db
 from itsdangerous import URLSafeTimedSerializer
 
 bp = Blueprint('auth', __name__, url_prefix='/auth')

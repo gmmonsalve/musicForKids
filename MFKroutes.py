@@ -1,6 +1,6 @@
 from flask import (Blueprint, g, redirect, render_template, request, url_for)
-from .auth import login_required
-from .db import get_db
+from auth import login_required
+from db import get_db
 
 bp = Blueprint('MFKroutes',__name__)
 
