@@ -21,9 +21,9 @@ def create_app():
         MAIL_USE_SSL=True
     )
 
-    from . import db
+    from db import init_app
 
-    db.init_app(app)
+    init_app(app)
 
     from . import auth
     from . import MFKroutes
