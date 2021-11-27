@@ -25,11 +25,11 @@ def create_app():
 
     init_app(app)
 
-    from . import auth
-    from . import MFKroutes
+    from auth import bp
+    from MFKroutes import bp as bp2
 
-    app.register_blueprint(auth.bp)
-    app.register_blueprint(MFKroutes.bp)
+    app.register_blueprint(bp)
+    app.register_blueprint(bp2)
     
     return app
 
